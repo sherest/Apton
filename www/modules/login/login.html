@@ -1,0 +1,24 @@
+<ion-view>
+  <ion-header-bar class="bar-royal">
+    <h1 class="title">Login</h1>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="email" ng-model="loginData.email" ng-required="true">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password" ng-required="true">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+    <a href="#/signup" class="button button-positive button-clear button-block ">Or create an account</a>
+    <button class="button button-block button-assertive icon ion-social-google icon-left" ng-click="loginWithGoogle()">Log in with Google</button>
+  </ion-content>
+</ion-view>
